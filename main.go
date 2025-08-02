@@ -75,6 +75,7 @@ func (a *Agent) Run(ctx context.Context) error {
 		if err != nil {
 			return err
 		}
+
 		conversation = append(conversation, outputMesg.ToParam())
 
 		toolResults := []anthropic.ContentBlockParamUnion{}
