@@ -14,7 +14,7 @@ import (
 func main() {
 	client := anthropic.NewClient()
 	scanner := bufio.NewScanner(os.Stdin)
-	tools := []ToolDefinition{ReadFileDefinition}
+	tools := []ToolDefinition{ReadFileDefinition, ListFilesDefinition, EditFileDefinition}
 
 	getUserMessage := func() (string, bool) {
 		if !scanner.Scan() {
